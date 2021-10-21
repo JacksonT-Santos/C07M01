@@ -1,6 +1,14 @@
 console.log('\nVAMOS COMEÇAR!!!\n');
 var rodadas = +prompt('\nQUANTAS RODADAS SERÃO?\n');
 var jognum = +prompt('\nQUANTOS JOGARES VÃO JOGAR?(até 6 jogadores\n');
+while (jognum<2){
+  console.log('É necessário pelo menos dois jogadores');
+  jognum = +prompt('\nQUANTOS JOGARES VÃO JOGAR?(até 6 jogadores\n');
+};
+while (jognum>6){
+  console.log('Há muitos jogadores!');
+  jognum = +prompt('\nQUANTOS JOGARES VÃO JOGAR?(até 6 jogadores\n');
+};
 var count = 1;
 function jogada(){
   let aleatorio = Math.ceil(Math.random()*6);
